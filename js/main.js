@@ -11,16 +11,12 @@ let kmInput = prompt("Travel Distance (km)").Number;
 const kmPrice = 0.21;
 const price = kmPrice * kmInput;
 
-if (isNan(ageInput) || isNan(kmInput)) {
+if (isNaN(ageInput) || isNaN(kmInput)) {
   console.log("Please insert a valid number");
 } else if (ageInput <= 17) {
   console.log(price * 0.8);
-}
 } else if (ageInput >= 65) {
-      console.log(price * 0.6);
-    }
-    else {
-      console.log(price)
-    }
-
-
+  console.log(price * 0.6);
+} else {
+  console.log(price);
+}
