@@ -5,18 +5,19 @@
 //- va applicato uno sconto del 40% per gli over 65.
 //- L’output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). Questo richiederà un minimo di ricerca.
 
-let ageInput = prompt("Passenger's Age").Number;
-let kmInput = prompt("Travel Distance (km)").Number;
+const ageInput = Number(prompt("Passenger's Age"));
+const kmInput = Number(prompt("Travel Distance (km)"));
 
 const kmPrice = 0.21;
-const price = kmPrice * kmInput;
+const price = (kmPrice * kmInput).toFixed(2);
+//const finalPrice = price.toFixed(2);
 
 if (isNaN(ageInput) || isNaN(kmInput)) {
   console.log("Please insert a valid number");
 } else if (ageInput <= 17) {
-  console.log(price * 0.8);
+  console.log((price * 0.8).toFixed(2));
 } else if (ageInput >= 65) {
-  console.log(price * 0.6);
+  console.log((price * 0.6).toFixed(2));
 } else {
-  console.log(price);
+  console.log(price.toFixed(2));
 }
