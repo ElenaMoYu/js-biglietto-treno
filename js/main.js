@@ -9,7 +9,7 @@ const ageInput = Number(prompt("Passenger's Age"));
 const kmInput = Number(prompt("Travel Distance (km)"));
 
 const kmPrice = 0.21;
-const price = (kmPrice * kmInput).toFixed(2);
+const price = kmPrice * kmInput;
 //const finalPrice = price.toFixed(2);
 
 if (isNaN(ageInput) || isNaN(kmInput)) {
